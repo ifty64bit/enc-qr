@@ -13,7 +13,8 @@ function Scan() {
                     onScan={(data) => {
                         if (data.length > 0) {
                             setPaused(true);
-                            router.push(`/result/${data[0].rawValue}`);
+                            const value = data[0].rawValue;
+                            router.push(`/result/${value.split("/token")[1]}`);
                         }
                     }}
                     paused={paused}
