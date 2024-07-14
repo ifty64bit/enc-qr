@@ -3,6 +3,7 @@ import { qrValues } from "@/db/schemas/qr_values";
 import { eq } from "drizzle-orm";
 import { QRCodeSVG } from "qrcode.react";
 import { headers } from "next/headers";
+import DownloadBtn from "./components/DownloadBtn";
 
 async function ShowQrCode({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -16,12 +17,13 @@ async function ShowQrCode({ params }: { params: { id: string } }) {
         .limit(1);
 
     return (
-        <main className="w-screen h-screen flex justify-center items-center">
+        <main className="w-screen h-screen flex flex-col justify-center items-center p-1">
             <QRCodeSVG
+                id="qr-code"
                 value={`${base}/token/${value[0].value as string}`}
-                height={"70%"}
-                width={"70%"}
+                className="p-2 "
             />
+            <DownloadBtn />
         </main>
     );
 }
