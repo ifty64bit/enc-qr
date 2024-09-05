@@ -1,4 +1,4 @@
-import db from "@/db";
+import { db } from "@/db";
 import { qrValues } from "@/db/schemas/qr_values";
 import { encryptData } from "@/utils/enc";
 import { redirect } from "next/navigation";

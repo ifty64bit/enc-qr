@@ -1,4 +1,4 @@
-import db from "@/db";
+import { db } from "@/db";
 import { qrValues } from "@/db/schemas/qr_values";
 import { eq } from "drizzle-orm";
 import { QRCodeSVG } from "qrcode.react";
@@ -20,7 +20,7 @@ async function ShowQrCode({ params }: { params: { id: string } }) {
         <main className="w-screen h-screen flex flex-col justify-center items-center p-1">
             <QRCodeSVG
                 id="qr-code"
-                value={`${base}/token/${value[0].value as string}`}
+                value={`${base}/token/${value[0].value as string}:${id}`}
                 className="p-2 "
             />
             <DownloadBtn />

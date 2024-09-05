@@ -1,13 +1,16 @@
 import { defineConfig } from "drizzle-kit";
+import { loadEnvConfig } from "@next/env";
+
+const projectDir = process.cwd();
+loadEnvConfig(projectDir);
 
 export default defineConfig({
     schema: "./src/db/schemas/*.ts",
     out: "./drizzle",
     dialect: "sqlite",
     dbCredentials: {
-        url: "libsql://cicada-ifty64bit.turso.io",
-        authToken:
-            "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3MTk2MDIyMjksImlkIjoiMTdmNDBhYmYtOWY5YS00YmMxLWJhMTEtZTI1YTAyYzkzZWJjIn0.ncK7foMUJeBsF9MNkQnGCLdWCyl4THKj83Cv08zTFCjfbAp_hvjVpH4XOCDzvokbgGBh93uE0hpkK9OGL6i_DQ",
+        url: process.env.TURSO_URL as string,
+        authToken: process.env.TURSO_AUTH_TOKEN as string,
     },
     driver: "turso",
 });

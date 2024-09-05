@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "db7f7827-5408-497b-bc99-a0629edc3dcd",
+  "id": "a72cbbe5-7239-47bc-bb24-4a6c16fc2d17",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "qr_values": {
@@ -20,6 +20,14 @@
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
+        },
+        "scan_count": {
+          "name": "scan_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": 0
         }
       },
       "indexes": {},

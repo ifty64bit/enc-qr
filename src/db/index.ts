@@ -3,9 +3,8 @@ import { createClient } from "@libsql/client";
 
 const client = createClient({
     url: process.env.TURSO_URL as string,
-    authToken: process.env.TURSO_TOKEN as string,
+    authToken: process.env.TURSO_AUTH_TOKEN as string,
 });
 
-const db = drizzle(client);
+export const db = drizzle(client);
 
-export default db;
