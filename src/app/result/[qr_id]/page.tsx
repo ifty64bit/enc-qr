@@ -4,19 +4,18 @@ import { decryptData } from "@/utils/enc";
 import { eq, sql } from "drizzle-orm";
 
 async function Result({ params }: { params: { qr_id: string } }) {
-    const serilized = decodeURIComponent(params.qr_id);
-    const qr = serilized.split(":")[0];
-    const id = serilized.split(":")[1];
-
     const response = await db
         .update(qrValues)
         .set({ scan_count: sql`${qrValues.scan_count} + 1` })
-        .where(eq(qrValues.id, Number(id)))
-        .returning({ updated: qrValues.scan_count });
+        .where(eq(qrValues.id, Number(params.qr_id)))
+        .returning({
+            updated: qrValues.scan_count,
+            value: qrValues.value,
+        });
 
     const scan_count = response[0].updated;
 
-    const decrypted = decryptData(qr);
+    const decrypted = decryptData(response[0].value);
 
     return (
         <div className="w-screen h-screen flex flex-col justify-center items-center">

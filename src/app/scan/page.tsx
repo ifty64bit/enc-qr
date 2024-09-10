@@ -10,6 +10,9 @@ function Scan() {
         <div className="w-screen h-screen flex justify-center items-center">
             <div>
                 <Scanner
+                    constraints={{
+                        noiseSuppression: true,
+                    }}
                     onScan={(data) => {
                         if (data.length > 0) {
                             setPaused(true);
