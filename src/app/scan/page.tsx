@@ -13,6 +13,9 @@ function Scan() {
                     constraints={{
                         noiseSuppression: true,
                     }}
+                    components={{
+                        zoom: true,
+                    }}
                     onScan={(data) => {
                         if (data.length > 0) {
                             setPaused(true);

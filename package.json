@@ -12,11 +12,11 @@
     },
     "dependencies": {
         "@libsql/client": "^0.7.0",
-        "@yudiel/react-qr-scanner": "^2.0.4",
+        "@yudiel/react-qr-scanner": "^2.0.8",
         "cryptr": "^6.3.0",
         "drizzle-orm": "^0.31.2",
         "next": "14.2.8",
-        "qrcode.react": "^3.1.0",
+        "qrcode.react": "^4.0.1",
         "react": "^18",
         "react-dom": "^18",
         "react-qr-code": "^2.0.15"

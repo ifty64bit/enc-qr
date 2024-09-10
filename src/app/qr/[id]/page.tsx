@@ -18,6 +18,7 @@ async function ShowQrCode({ params }: { params: { id: string } }) {
         <main className="w-screen h-screen flex flex-col justify-center items-center p-1">
             <QRCodeSVG
                 id="qr-code"
+                size={60}
                 value={`${base}/token/${id}`}
                 className="p-2"
                 style={{ imageRendering: "pixelated" }}

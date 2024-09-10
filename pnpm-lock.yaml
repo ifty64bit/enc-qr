@@ -12,8 +12,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0
       '@yudiel/react-qr-scanner':
-        specifier: ^2.0.4
-        version: 2.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^2.0.8
+        version: 2.0.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       cryptr:
         specifier: ^6.3.0
         version: 6.3.0
@@ -24,8 +24,8 @@ importers:
         specifier: 14.2.8
         version: 14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       qrcode.react:
-        specifier: ^3.1.0
-        version: 3.1.0(react@18.3.1)
+        specifier: ^4.0.1
+        version: 4.0.1(react@18.3.1)
       react:
         specifier: ^18
         version: 18.3.1
@@ -598,8 +598,8 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@yudiel/react-qr-scanner@2.0.4':
-    resolution: {integrity: sha512-ZVSyT6F2S8mdURUCy2Oz9/khZ3DfzsbU8OO5lXYzLzJLVwfhLX+jo2Gd80FyBMqBxM0fbwNNvAawTajcJ3hb8w==}
+  '@yudiel/react-qr-scanner@2.0.8':
+    resolution: {integrity: sha512-/7WHsdC1a/Z909J2zZxqgpUQ1iI554fZxIagucH/tFu1MhZkNIeykYI1OdZgDEwV4CzuSi+h90wwNrhmETcmRw==}
     peerDependencies:
       react: ^17 || ^18
       react-dom: ^17 || ^18
@@ -1730,8 +1730,8 @@ packages:
   qr.js@0.0.0:
     resolution: {integrity: sha512-c4iYnWb+k2E+vYpRimHqSu575b1/wKl4XFeJGpFmrJQz5I88v9aY2czh7s0w36srfCM1sXgC/xpoJz5dJfq+OQ==}
 
-  qrcode.react@3.1.0:
-    resolution: {integrity: sha512-oyF+Urr3oAMUG/OiOuONL3HXM+53wvuH3mtIWQrYmsXoAq0DkvZp2RYUWFSMFtbdOpuS++9v+WAkzNVkMlNW6Q==}
+  qrcode.react@4.0.1:
+    resolution: {integrity: sha512-Lpj0tPBn561WiQ3QQWXbkx8xTtB8BZkJeMZWLJIL8iaPBCoWzW1IpCeU3gY5MDqsb0+efCvEGkl9O0naP64crA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
@@ -2473,7 +2473,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@yudiel/react-qr-scanner@2.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@yudiel/react-qr-scanner@2.0.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       barcode-detector: 2.2.7
       react: 18.3.1
@@ -3779,7 +3779,7 @@ snapshots:
 
   qr.js@0.0.0: {}
 
-  qrcode.react@3.1.0(react@18.3.1):
+  qrcode.react@4.0.1(react@18.3.1):
     dependencies:
       react: 18.3.1
 
